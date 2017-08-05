@@ -1,0 +1,24 @@
+{% extends '::Component/base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} { PLAY }
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/games/quickclick.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+        <p>Clique pour commencer <span>puis clique lorsque tu vois du bleu</span>
+        </p>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/games/quickclick.js') }}"></script>
+{% endblock %}

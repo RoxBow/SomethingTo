@@ -1,0 +1,20 @@
+{% extends '::Component/base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} { PLAY }
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/games/common.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <canvas id="myCanvas"></canvas>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/games/bubbleshot.js') }}"></script>
+{% endblock %}

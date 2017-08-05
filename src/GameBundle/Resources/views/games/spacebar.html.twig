@@ -1,0 +1,28 @@
+{% extends '::Component/base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} { PLAY }
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/games/spacebar.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+        <div class="info">
+            <p>Appuyer sur la barre espace au bon moment</p>
+            <button>Lancer la partie</button>
+        </div>
+        <div class='viewfinder'></div>
+        <div class='target'></div>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/games/spacebar.js') }}"></script>
+{% endblock %}

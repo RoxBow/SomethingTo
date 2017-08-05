@@ -1,0 +1,15 @@
+@import "../variables";
+
+@font-face {
+  @font-face {
+    font-family: $gameFont;
+    src: url(../fonts/young.ttf);
+    font-weight: normal;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  font-family: $gameFont, Arial, sans-serif;
+}

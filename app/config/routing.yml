@@ -1,0 +1,31 @@
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+about:
+  path : /about
+  defaults:  { _controller: AppBundle:Default:about }
+
+game:
+  path : /games
+  defaults:  { _controller: GameBundle:Game:index }
+
+game_register:
+  path : /games/register
+  defaults:  { _controller: GameBundle:Game:register }
+  methods: [POST]
+
+game_show:
+  path : /games/{game}
+  defaults:  { _controller: GameBundle:Game:show }
+
+user_list:
+  path : /annuaire
+  defaults:  { _controller: AppBundle:User:list }
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

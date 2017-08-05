@@ -1,0 +1,37 @@
+{% extends 'Component/base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} { MEET }
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/table.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <p>Filtre : </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Pseudo</th>
+                <th>Quickclick</th>
+                <th>Spacebar</th>
+                <th>Bubbleshot</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in listUser %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    {% for game in user.games %}
+                        <td>{{ game.score | default('/')}}</td>
+                        <td>{{ game.level | default('1') }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

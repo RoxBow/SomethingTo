@@ -1,0 +1,29 @@
+{% extends 'Component/base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} { UNDERSTAND }
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/card.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <section class="container_card">
+        <div class="card">
+            <h3>{ Quoi ? }</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga fugiat non!</p>
+        </div>
+        <div class="card">
+            <h3>{ Pourquoi ? }</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga fugiat non!</p>
+        </div>
+        <div class="card">
+            <h3>{ Qui ? }</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga fugiat non!</p>
+        </div>
+    </section>
+
+{% endblock %}

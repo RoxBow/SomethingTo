@@ -1,0 +1,15 @@
+### Database ###
+
+# Game
+    id
+    game_id
+    name
+    score
+    level
+    try
+    time
+    mode
+
+// Debug
+throw new NotFoundHttpException("Message");
+

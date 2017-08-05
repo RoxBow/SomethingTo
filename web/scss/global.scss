@@ -1,0 +1,82 @@
+@import "reset";
+@import "variables";
+
+@font-face {
+  font-family: AvenirNextPro;
+  src: url(../fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AvenirNextPro;
+  src: url(../fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: AvenirNextPro;
+  src: url(../fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
+  font-family: $mainFont, "Arial", "Helvetica", sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+  color: $writing;
+  background: $mainColor;
+  a {
+    text-decoration: none;
+    color: $writing;
+  }
+  header {
+    background: $secondColor;
+    h1 {
+      padding: 2% 0;
+      text-align: center;
+      font-weight: 600;
+      font-size: 2.5em;
+      a {
+        color: $writing;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $writing;
+      border-bottom: 1px solid #000;
+      li {
+        width: 10%;
+        text-align: center;
+        a {
+          display: block;
+          width: 100%;
+          padding: 8%;
+          color: #000;
+          transition: all .2s;
+          &:hover {
+            background: $secondColor;
+            color: $writing;
+          }
+        }
+      }
+    }
+    // ul
+  }
+  // header
+}
+
+
+
+

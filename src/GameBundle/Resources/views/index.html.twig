@@ -1,0 +1,32 @@
+{% extends '::Component/base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} { PLAY }
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/card.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <section class="container_card">
+        <div class="card">
+            <h3>{ QUICKCLICK }</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga fugiat non!</p>
+            <a href="{{ path('game_show', { 'game': 'quickclick'}) }}">Jouer</a>
+        </div>
+        <div class="card">
+            <h3>{ SPACEBAR }</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga fugiat non!</p>
+            <a href="{{ path('game_show', { 'game': 'spacebar'}) }}">Jouer</a>
+        </div>
+        <div class="card">
+            <h3>{ BUBBLESHOT }</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga fugiat non!</p>
+            <a href="{{ path('game_show', { 'game': 'bubbleshot'}) }}">Jouer</a>
+        </div>
+    </section>
+
+{% endblock %}

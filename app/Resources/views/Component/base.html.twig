@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>{% block title %}Something to {% endblock %}</title>
+
+        {% block stylesheets %}
+            <link href="{{ asset('css/global.css') }}" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="wrapper day">
+            {% block header %}
+                {{ include('@component/header.html.twig') }}
+            {% endblock %}
+
+            {% block body %}{% endblock %}
+        </div>
+
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
